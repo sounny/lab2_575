@@ -52,7 +52,7 @@ function setMap(){
     //use Promise.all to parallelize asynchronous data loading
     var promises = [];
     promises.push(d3.csv("data/csvArizonaCountyACS2019.csv")); //load attributes from csv
-    promises.push(d3.json("data/arizonaACS2019.geojson")); //load choropleth spatial data
+    promises.push(d3.json("data/ArizonaACS2019.geojson")); //load choropleth spatial data
     Promise.all(promises).then(callback);
 
     function callback(data){
